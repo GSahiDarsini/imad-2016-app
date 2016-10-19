@@ -6,23 +6,24 @@ var app = express();
 app.use(morgan('combined'));
 var articles = {
     
-`article-one:{
-    title :' 햞ticle One !!! - GSD',
+articleOne:
+{
+    title :'Article One !!! - GSD',
     heading : 'Article One',
     date : '19 th october, 2016',
-    content :` <p> Life is all about journey and not being a destination. we face many challenges but at the end of the day when we take them for the positively there in nothing on this earth that can hinder us from doing miracles. </p>
+    content :
+    `<p> Life is all about journey and not being a destination. we face many challenges but at the end of the day when we take them for the positively there in nothing on this earth that can hinder us from doing miracles. </p>
     <p> life is never and will never be rude to us , its all about the approach of the individual that decides where we land : in a paradise or in a hell. </p>
-    <p> enjoy life to the fullest because you never know what happens the next moment. take challenges which will haunt you but at the end will create a glorious aura around you </P>`
+    <p> enjoy life to the fullest because you never know what happens the next moment. take challenges which will haunt you but at the end will create a glorious aura around you </p>`
     
 },
-`article-two:{ title :' 햞ticle Two !!! - GSD',
+articleTwo:{ title :' 햞ticle Two !!! - GSD',
     heading : 'Article Two',
-    date : '19 th october, 2016',
-    content :` <p> Life is all about journey and not being a destination. we face many challenges but at the end of the day when we take them for the positively there in nothing on this earth that can hinder us from doing miracles. </p>
-    <p> life is never and will never be rude to us , its all about the approach of the individual that decides where we land : in a paradise or in a hell. </p>
-    <p> enjoy life to the fullest because you never know what happens the next moment. take challenges which will haunt you but at the end will create a glorious aura around you </P>`
+   date : '19 th october, 2016',
+    content :
+    `<p> Hello .... this is Article two </p>`
     },
-`article-three:{ title :' 햞ticle One !!! - GSD',
+articleThree:{ title :' 햞ticle One !!! - GSD',
     heading : 'Article One',
     date : '19 th october, 2016',
     content :` <p> Life is all about journey and not being a destination. we face many challenges but at the end of the day when we take them for the positively there in nothing on this earth that can hinder us from doing miracles. </p>
