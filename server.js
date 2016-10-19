@@ -40,10 +40,8 @@ var content=data.content;
 var htmlTemplate = {
     <html>
        <head>
-              <title>
-                 $title
-                 </title>
-                  <link href = "/ui/style.css"rel = "stylesheet"/>
+       <title> ${title} </title>
+     <link href = "/ui/style.css" rel = "stylesheet"/>
    </head>
     <body>
            <div class="container">
@@ -51,10 +49,9 @@ var htmlTemplate = {
               <a href="/"> HOME </a>
              </div>
     <hr/>
-    <h3> $(heading) </h3>
-    <div> $(date) </div>
-    <div> $(content)
-    </div>
+    <h3> ${heading} </h3>
+    <div> ${date} </div>
+    <div> ${content} </div>
     </div>
     </body>
     </html>}
