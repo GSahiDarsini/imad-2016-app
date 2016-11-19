@@ -1,0 +1,63 @@
+html, body {
+  background-color: #222;
+  margin: 0;
+}
+
+.parent {
+  position: absolute;
+  left: calc((100vw - 90vmin) / 2);
+  top: calc((100vh - 90vmin) / 2);
+  width: 90vmin;
+  height: 90vmin;
+  animation-name: huerot;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.square {
+  width: 7vmin;
+  height: 7vmin;
+  position: absolute;
+  animation-name: spin;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+$i: 0;
+$shape: 0;
+
+@for $x from 0 through 9 {
+  @for $y from 0 through 9 {
+    $i: $i + 1;
+    .square:nth-child(#{$i}) {
+      animation-delay: #{$i*30}ms;
+      background-color: hsl(($x+$y)*3, 100%, 50%);
+      @if ($i + $shape) % 2 == 1 {
+        border-radius: 0 50% 0 50%;
+      } @else {
+        border-radius: 50% 0 50% 0;
+      }
+      left: #{$x*9}vmin;
+      top: #{$y*9}vmin;
+    }
+  }
+  $shape: $shape + 1;
+} 
+
+@keyframes spin {
+	85% { 
+    transform: rotate(180deg);
+  }
+  100% { 
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes huerot {
+  100% { 
+    filter: hue-rotate(360deg);
+  }
+}
